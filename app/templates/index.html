@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block title %}Test{% endblock %}
+{% block body %}
+<div>
+  <form action="/" id="main-form" method="POST">
+      <div class="form-head">
+          <div class="row">
+              <div class="col-md-offset-2 col-md-8">
+                  <label for="user_id" class="input-control-label">ID</label>
+                  <input name="id" type="number" class="input-control" id="user_id" required />
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-offset-3 col-md-3">
+                  <input type="button" class="input-button basic" id="get_posts_basic" value="Get my posts" />
+              </div>
+              <div class="col-md-3">
+                  <a href="https://stackexchange.com/oauth?client_id=11232&scope&redirect_uri=https://evening-bastion-23546.herokuapp.com/oauth"
+                     class="input-button oauth form-control" style="text-align:center;" id="get_posts_oauth">Get my posts(OAuth)</a>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+{% endblock %}
